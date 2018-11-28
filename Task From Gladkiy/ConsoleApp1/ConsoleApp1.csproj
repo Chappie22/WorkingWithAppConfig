@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Backup" />
+      <Folder Include="Input\Directory\NewDirectory2" />
+      <Folder Include="Output" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Input\Directory1\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Input\Directory1\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Input\Directory1\**" />
+    </ItemGroup>
+
+</Project>
